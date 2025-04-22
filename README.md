@@ -29,6 +29,8 @@ df.columns = df.columns.str.strip()
 #  Drop columns with constant values (if any)
 df = df.loc[:, df.nunique() > 1]
 
+# dropoe the single column
+df = df.drop(columns=['Dt_Customer'])
 
 
 # ----------------------------
